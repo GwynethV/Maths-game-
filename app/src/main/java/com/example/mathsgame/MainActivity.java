@@ -1,7 +1,6 @@
 package com.example.mathsgame;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -10,14 +9,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView problem;
+    TextView Mathsquestion;
     ImageView app1, app2, app3, app4, app5, app6, app7, app8, app9;
     Button but0, but1, but2, but3, but4, but5, but6, but7,but8, but9; //Button
     ImageView str1, str2,str3,str4,str5;
+    String Phrase;
+    int Number1, Number2 ,answer;
     ImageView bkplate;
+
 
 public View.OnTouchListener handleTouch = new View.OnTouchListener() {
     float dX, dY;
@@ -127,4 +131,16 @@ public View.OnTouchListener handleTouch = new View.OnTouchListener() {
         str4 = findViewById(R.id.str4);
         str5 = findViewById(R.id.str5);
 
-}}
+
+    Mathsquestion = findViewById(R.id.Mathsquestion);
+    Random rand = new Random();
+    Number1 = rand.nextInt(4) + 1;
+    Number2 = rand.nextInt(4) + 1;
+    this.Phrase = (Number1) + "+" + (Number2) + "=";
+    Mathsquestion = (TextView) findViewById(R.id.Mathsquestion);
+    Mathsquestion.setText(Phrase);
+    this.answer = this.Number1 + Number2;
+
+
+}
+}

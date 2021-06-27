@@ -22,7 +22,6 @@
         android:id="@+id/but0"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/number0"
         android:foreground="@drawable/number0"
@@ -121,6 +120,7 @@
         android:foreground="@drawable/number9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/but1" />
+
     //stars
     <ImageView
         android:id="@+id/str1"
@@ -321,6 +321,18 @@
         app:layout_constraintVertical_bias="0.83"
         app:srcCompat="@drawable/apple" />
 
+    <TextView
+        android:id="@+id/Mathsquestion"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="#FFFFFF"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bkplate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
