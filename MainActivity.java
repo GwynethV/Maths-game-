@@ -278,5 +278,91 @@ public class MainActivity extends AppCompatActivity {
             }, 2000);
         }
 
+    }
+    @SuppressLint("SetTextI18n")
+    public void onPress_btn1 (View v) {
+        but1 = findViewById(R.id.but1);
+        int btn_0value = 1;
+        /// wrong
+        if (Solve == btn_0value) {
+            /// good job
+            Maths_question.setText("Well done!");
+            buttonstart.setVisibility(View.VISIBLE);
 
-} }
+//when answer is right make sure the buttons are invisible.
+            but0.setVisibility(View.INVISIBLE);
+            but1.setVisibility(View.INVISIBLE);
+            but2.setVisibility(View.INVISIBLE);
+            but3.setVisibility(View.INVISIBLE);
+            but4.setVisibility(View.INVISIBLE);
+            but5.setVisibility(View.INVISIBLE);
+            but6.setVisibility(View.INVISIBLE);
+            but7.setVisibility(View.INVISIBLE);
+            but8.setVisibility(View.INVISIBLE);
+            but9.setVisibility(View.INVISIBLE);
+            app1.setVisibility(View.INVISIBLE);
+            app2.setVisibility(View.INVISIBLE);
+            app3.setVisibility(View.INVISIBLE);
+            app4.setVisibility(View.INVISIBLE);
+            app5.setVisibility(View.INVISIBLE);
+            app6.setVisibility(View.INVISIBLE);
+            app7.setVisibility(View.INVISIBLE);
+            app8.setVisibility(View.INVISIBLE);
+            app9.setVisibility(View.INVISIBLE);
+            app10.setVisibility(View.INVISIBLE);
+            bk_plate.setVisibility(View.INVISIBLE);
+
+
+// when the answer is right make sure that the stars are visible
+            str1.setVisibility(View.VISIBLE);
+            str2.setVisibility(View.VISIBLE);
+            str3.setVisibility(View.VISIBLE);
+            str4.setVisibility(View.VISIBLE);
+            str5.setVisibility(View.VISIBLE);
+
+// when the stars are visible make sure that there is animation and the answer is correct.
+
+            //star 1
+            rAnimation = new RotateAnimation(0, 3500);
+            rAnimation.setDuration(2500);
+            str1.startAnimation(rAnimation);
+
+            //star2
+            sAnimation = new ScaleAnimation(0, 4, 0, 4);
+            rAnimation.setDuration(1500);
+            str2.startAnimation(rAnimation);
+
+
+            //star3
+            sAnimation = new ScaleAnimation(0, 4, 0, 4);
+            sAnimation.setDuration(1500);
+            str3.startAnimation(sAnimation);
+
+
+            //star5
+            aAnimation= new AlphaAnimation(0, 2);
+            aAnimation.setDuration(1800);
+            str4.startAnimation(aAnimation);
+
+            //star4
+            tAnimation = new TranslateAnimation(0, 200, 0, 100);
+            tAnimation.setDuration(1600);
+            str5.startAnimation(tAnimation);
+
+            //if the question is wrong, the user should retry the game.
+
+        } else {
+            Maths_question.setText("Try again");
+            Maths_question.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Maths_question.setText(question);
+                }
+            }, 2000);
+        }
+
+    }
+
+    
+
+}
