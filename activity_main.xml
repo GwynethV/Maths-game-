@@ -21,6 +21,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/play_again" />
 
-    
+    <ImageView
+        android:id="@+id/bk_plate"
+        android:layout_width="375dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/bkplate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/plate_white" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
